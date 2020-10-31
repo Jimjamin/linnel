@@ -1,0 +1,58 @@
+
+@media screen and (max-width: 950px) {
+    #helpBtn, footer {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header label {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #linnel {
+        display: none;
+    }
+    #headerLogo {
+        display: block;
+    }
+    body {
+        padding-left: calc(var(--padding) - 1em);
+        padding-right: calc(var(--padding) - 1em);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    footer {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html, body {
+        height: calc(100% - var(--padding));
+        width: calc(100% - var(--padding));
+    }
+    p, span {
+        font-size: var(--small-font);
+        text-align: justify;
+    }
+    h1 {
+        font-size: var(--large-font);
+    }
+    #headerLogo {
+        display: none;
+    }
+    #profileBtn {
+        right: 10px !important;
+    }
+    #lightMode, #nightMode {
+        float: left !important;
+        left: calc(19px + (var(--padding) - 1em)) !important;
+    }
+    #search {
+        left: calc(50% - 82.5px - var(--padding)) !important;
+    }
+}

@@ -1,0 +1,82 @@
+
+header {
+    height: var(--padding);
+    width: calc(100% + var(--padding));
+    position: absolute;
+    left: calc(0em - var(--padding));
+    top: 0em;
+    background-color: var(--theme);
+    box-shadow: 0px 1.5px 5px 2px black;
+}
+
+#linnel, #headerLogo {
+    float: left;
+    position: absolute;
+    top: 3.5px;
+    left: calc(19px + var(--padding));
+    cursor: pointer;
+}
+
+#headerLogo {
+    display: none;
+}
+
+#searchBtn {
+    background: none;
+    border: 1px var(--theme);
+    border-radius: 50px;
+    height: 36px;
+    width: 36px;
+    outline: none;
+    position: relative;
+    top: 8px;
+    left: 65%;
+    padding: 0;
+    margin-left: 20px;
+}
+
+header button {
+    background: none;
+    border: 1px var(--theme);
+    border-radius: 50px;
+    height: 56px;
+    width: 56px;
+    outline: none;
+    position: relative;
+    top: 3px;
+    right: 19px;
+    float: right;
+    padding: 0;
+    margin-left: 20px;
+}
+
+header button:hover {
+    background-color: var(--hover-theme);
+}
+
+header input, header label {
+    position: relative;
+    left: 37.5%;
+}
+
+header input {
+    width: 30%;
+    min-width: 165px;
+    top: 8px;
+    padding: 1em;
+    border: 0px black;
+    border-radius: 24px;
+}
+
+header label {
+    top: 18px;
+    margin-left: 6px;
+}
+
+#lightMode {
+    display: none;
+}
+
+header label:hover {
+    cursor: pointer;
+}

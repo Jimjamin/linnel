@@ -3,25 +3,27 @@
     <head>
         <title>Linnel</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../display/style.css">
-        <link rel="stylesheet" type="text/css" href="../display/w3.css">
+        <link rel="stylesheet" type="text/css" href="../display/header.css">
+        <link rel="stylesheet" type="text/css" href="../display/media.css">
         <link rel="icon" href="../image/favicon.png">
-        <script src="../src/script.js" defer></script>
+        <script src="../src/script.js" type="module" defer></script>
     </head>
-    <body onload="bootUp()">
+    <body>
         <header id="menuBar">
-            <img id="linnel" src="../image/linnel.png" height="48px" onclick="window.location.href = 'http:\/\/localhost:3000'">
-            <img id="headerLogo" src="../image/logo.png" height="48px" onclick="window.location.href = 'http:\/\/localhost:3000'">
-            <input type="text" name="search" id="search" placeholder="Search..." class="w3-round-xlarge w3-border-0">
+            <img id="linnel" src="../image/linnel.png" height="48px" class="homeLogo">
+            <img id="headerLogo" src="../image/logo.png" height="48px" class="homeLogo">
+            <input type="text" name="search" id="search" placeholder="Search...">
             <label for="search"><img src="../image/icons/search.png" height="28px" width="28px"></label>
-            <button><img src="../image/icons/profile.png" height="48px" width="48px"></button>
+            <button id="profileBtn"><img src="../image/icons/profile.png" height="48px" width="48px"></button>
             <button id="helpBtn"><img src="../image/icons/help.png" height="48px" width="48px"></button>
-            <button id="nightMode" onclick="switchLightMode()"><img src="../image/icons/night.png" height="48px" width="48px"></button>
-            <button id="lightMode" onclick="switchLightMode()"><img src="../image/icons/light.png" height="48px" width="48px"></button>
+            <button id="nightMode"><img src="../image/icons/night.png" height="48px" width="48px"></button>
+            <button id="lightMode"><img src="../image/icons/light.png" height="48px" width="48px"></button>
         </header>
         <div>
             <h1>Good morning!</h1>
-            <p>It is currently <span id="dateStamp">08:23PM on the 28th of October, 2018.</span></p>
+            <p id="dateStamp">It is currently 08:23PM on the 28th of October, 2018.</p>
         </div>
         <footer>
             <img src="../image/logo.png" height="48px" width="48px">

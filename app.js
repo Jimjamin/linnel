@@ -7,7 +7,9 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, "public/")));
 
-app.get("/", (request, result) => {
+app.get("/", (request, result) => result.redirect("/home"));
+
+app.get("/home", (request, result) => {
     result.sendFile(path.join(__dirname, "public/view/", "index.html"), error => {
         if (error) console.log("linnel is not able to open...");
         else console.log("linnel has opened!");
