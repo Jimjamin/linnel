@@ -18,8 +18,8 @@
 }
 
 html, body {
-    height: calc(100% - 2*var(--padding));
-    width: calc(100% - 2*var(--padding));
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -124,6 +124,10 @@ header label {
     }
     #headerLogo {
         display: block;
+    }
+    body {
+        padding-left: calc(var(--padding) - 1em);
+        padding-right: calc(var(--padding) - 1em);
     }
 }
 
