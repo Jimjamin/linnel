@@ -1,8 +1,7 @@
 
 "use strict";
 
-const user = "Nauchtabie";
-let flick = 1;
+const user = "";
 
 function bootUp() {
     welcomeUser();
@@ -36,8 +35,7 @@ function checkTime() {
     let isoDate = isoDateStamp(currentTime.getDate(), currentTime.getMonth(), currentTime.getFullYear());
 
     document.getElementById("dateStamp").innerHTML = `${isoTime} on the ${isoDate}.`
-
-    setTimeout(checkTime, 1000);
+    setTimeout(checkTime, 6000);
 }
 
 function isoTimeStamp(currentHour, currentMinute) {
@@ -45,10 +43,7 @@ function isoTimeStamp(currentHour, currentMinute) {
     currentHour = isoHour(currentHour);
     currentMinute = isoMinute(currentMinute);
 
-    let colon = ":";
-    if (flick === -1) colon = " ";
-    flick *= -1;
-    return `${currentHour}${colon}${currentMinute}${meridianPhase}`
+    return `${currentHour}:${currentMinute}${meridianPhase}`
 }
 
 function isoHour(currentHour) {
@@ -90,4 +85,20 @@ function isoMonth(currentMonth) {
     let listOfMonths = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
     return `${listOfMonths[currentMonth]}`;
+}
+
+function switchLightMode() {
+    if (document.getElementById("nightMode").style.display === "none") {
+        document.getElementById("menuBar").style.backgroundColor = "var(--theme)";
+        document.body.style.backgroundColor = "var(--light-theme)";
+        document.body.style.color = "black";
+        document.getElementById("lightMode").style.display = "none";
+        document.getElementById("nightMode").style.display = "inline-block";
+    } else {
+        document.getElementById("menuBar").style.backgroundColor = "var(--dark-theme)";
+        document.body.style.backgroundColor = "var(--theme)";
+        document.body.style.color = "white";
+        document.getElementById("nightMode").style.display = "none";
+        document.getElementById("lightMode").style.display = "inline-block";
+    }
 }
