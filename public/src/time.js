@@ -1,13 +1,13 @@
 
 "use strict";
 
-export function calcDayPhase(currentHour) {
+function calcDayPhase(currentHour) {
     if (currentHour > 18) return "evening";
     if (currentHour > 12) return "afternoon";
     return "morning";
 }
 
-export function isoTimeStamp(currentHour, currentMinute) {
+function isoTimeStamp(currentHour, currentMinute) {
     let meridianPhase = calcMeridianPhase(currentHour);
     currentHour = isoHour(currentHour);
     currentMinute = isoMinute(currentMinute);
@@ -33,7 +33,7 @@ function calcMeridianPhase(currentHour) {
     return "AM";
 }
 
-export function isoDateStamp(currentDay, currentMonth, currentYear) {
+function isoDateStamp(currentDay, currentMonth, currentYear) {
     currentDay = isoDay(currentDay);
     currentMonth = isoMonth(currentMonth);
 
@@ -42,12 +42,12 @@ export function isoDateStamp(currentDay, currentMonth, currentYear) {
 
 function isoDay(currentDay) {
     if (currentDay === 1 || currentDay === 21 || currentDay === 31) {
-        return `${currentDay}st`;
+        return `${currentDay}<sup>st</sup>`;
     } else if (currentDay === 2 || currentDay === 22) {
-        return `${currentDay}nd`;
+        return `${currentDay}<sup>nd</sup>`;
     } else if (currentDay === 3 || currentDay === 23) {
-        return `${currentDay}rd`;
-    } else return `${currentDay}th`;
+        return `${currentDay}<sup>rd</sup>`;
+    } else return `${currentDay}<sup>th</sup>`;
 }
 
 function isoMonth(currentMonth) {
@@ -55,3 +55,5 @@ function isoMonth(currentMonth) {
         "July", "August", "September", "October", "November", "December"];
     return `${listOfMonths[currentMonth]}`;
 }
+
+export { calcDayPhase, isoTimeStamp, isoDateStamp };
