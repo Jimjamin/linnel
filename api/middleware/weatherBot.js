@@ -1,6 +1,6 @@
 
 exports.fetchWeather = (app, fetch) => {
-    app.post("/api/weather", (request, result) => {
+    app.post("/weather/current", (request, result) => {
         const apiKey = process.env.WEATHER_API;
 
         let userLocation = request.body.userLocation;

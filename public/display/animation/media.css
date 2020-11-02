@@ -22,6 +22,11 @@
         float: left !important;
         left: calc(35px + (var(--padding) - 1em)) !important;
     }
+    html, body {
+        padding-left: calc(var(--padding) - 2em);
+        padding-right: calc(var(--padding) - 25em);
+        width: calc(100% - 0.75*var(--padding));
+    }
 }
 
 @media screen and (max-height: 600px) {
@@ -31,11 +36,6 @@
 }
 
 @media screen and (max-width: 550px) {
-    html, body {
-        padding-left: calc(var(--padding) - 1.5em);
-        padding-right: calc(var(--padding) - 1.5em);
-        width: calc(100% - 1.25*var(--padding));
-    }
     #headerLogo {
         display: none;
     }

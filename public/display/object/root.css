@@ -11,8 +11,11 @@
     --xxx-large-font: 42px;
     --bold: 800;
 
-    --light-theme: #F5E1FD;
-    --theme: #B399D4;
-    --dark-theme: #443557;
+    --x-light-theme: #f7edfc;
+    --light-theme: #f2d8fc;
+    --light-theme-grad: linear-gradient(335deg, rgb(236,208,247) 0%, rgb(214, 149, 240) 55%);
+    --theme: #a185c5;
+    --theme-grad: linear-gradient(335deg, rgb(179,153,212) 0%, rgb(133, 97, 177) 55%);
+    --dark-theme: #3a2c4b;
     --hover-theme: #a08cb9;
 }

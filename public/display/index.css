@@ -1,18 +1,45 @@
 
 html, body {
     height: calc(100% - 2.25*var(--padding));
-    width: calc(100% - 2.25*var(--padding));
+    width: calc(100% - 1.125*var(--padding));
 }
 
 body {
-    padding: calc(2*var(--padding));
-    font-size: var(--medium-font);
+    padding-top: calc(2*var(--padding));
+    padding-bottom: calc(2*var(--padding));
+    padding-left: calc(var(--padding));
+    padding-right: calc(var(--padding));
     margin: 0;
-    background-color: var(--light-theme);
+    background-color: var(--theme);
+    background: var(--theme-grad);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: Cambria Math !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     font-size: var(--large-font);
+}
+
+.component {
+    background-color: var(--x-light-theme);
+    box-shadow: 0px 0px 16px 4px black;
+    padding: 1em;
+    display: none;
+    font-size: var(--medium-font) !important;
+}
+
+.component img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#weatherDesc {
+    margin-top: 0.2em;
+    text-align: center;
+}
+
+a {
+    color: black;
+    font-weight: 600;
 }
 
 #preLoader {
@@ -53,18 +80,11 @@ body {
     min-width: 0px;
 }
 
-h1 {
-    font-size: var(--xx-large-font) !important;
-}
-
-h1, #dateStamp {
-    display: none;
-}
-
 footer {
     text-align: center;
     position: absolute;
     bottom: 0;
-    width: calc(100% - 7*var(--padding));
+    width: calc(100% - 3.5*var(--padding));
     font-size: var(--x-small-font);
+    color: white;
 }

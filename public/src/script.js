@@ -4,14 +4,15 @@
 import { checkTime, calcDayPhase } from './module/time.js';
 import { checkWeather } from './module/weather.js';
 
-const user = "";
-
 window.onload = () => {
     document.getElementById("themeBtn").onclick = switchLightMode;
 
     welcomeUser();
 
     reloadHome();
+    document.getElementById("preLoader").style.animationDuration = "2.5s";
+    document.getElementById("loaderBar").style.animationDuration = "2.5s";
+    document.body.style.animationDuration = "2.5s";
     setTimeout(() => {
         document.getElementById("preLoader").style.display = "none";
     }, 2500);
@@ -29,33 +30,35 @@ function reloadHome() {
 function welcomeUser() {
     let currentTime = new Date();
     let phaseOfDay = calcDayPhase(currentTime.getHours());
-    if (user !== "") {
-        document.title = `Good ${phaseOfDay}, ${user} - Linnel`;
-        document.getElementsByTagName("h1")[0].innerHTML = `Good ${phaseOfDay}, ${user}!`;
-    } else {
-        document.title = `Good ${phaseOfDay} - Linnel`;
-        document.getElementsByTagName("h1")[0].innerHTML = `Good ${phaseOfDay}!`;
+    document.title = `Good ${phaseOfDay} - Linnel`;
+    if (document.getElementById("dateStamp")) {
+        document.getElementById("dateStamp").innerHTML = `Good ${phaseOfDay}! `;
+        checkTime();
+        checkWeather();
     }
 
-    document.getElementsByTagName("h1")[0].style.display = "block";
-    document.getElementById("dateStamp").style.display = "inline-block";
-
-    checkTime();
-    checkWeather();
+    let components = document.getElementsByClassName("component");
+    for (let component of components) component.style.display = "block";
 }
 
 function switchLightMode() {
     if (document.getElementById("lightIcon")) {
         document.getElementById("menuBar").style.backgroundColor = "var(--theme)";
         document.body.style.backgroundColor = "var(--light-theme)";
-        document.body.style.color = "black";
+        document.body.style.background = "var(--light-theme-grad)";
         document.getElementById("lightIcon").src = "../image/icons/night.png";
         document.getElementById("lightIcon").id = "nightIcon";
+        document.getElementById("presentedBy").style.color = "black";
     } else {
         document.getElementById("menuBar").style.backgroundColor = "var(--dark-theme)";
         document.body.style.backgroundColor = "var(--theme)";
-        document.body.style.color = "white";
+        document.body.style.background = "var(--theme-grad)";
         document.getElementById("nightIcon").src = "../image/icons/light.png";
         document.getElementById("nightIcon").id = "lightIcon";
+        document.getElementById("presentedBy").style.color = "white";
     }
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
 }
+
+export { welcomeUser };

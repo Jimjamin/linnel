@@ -1,6 +1,8 @@
 
 "use strict";
 
+import { welcomeUser } from '../script.js';
+
 function calcDayPhase(currentHour) {
     if (currentHour > 18) return "evening";
     if (currentHour > 12) return "afternoon";
@@ -61,8 +63,8 @@ function checkTime() {
     let isoTime = isoTimeStamp(currentTime.getHours(), currentTime.getMinutes());
     let isoDate = isoDateStamp(currentTime.getDate(), currentTime.getMonth(), currentTime.getFullYear());
 
-    document.getElementById("dateStamp").innerHTML = `It is currently ${isoTime} on the ${isoDate}.`
-    setTimeout(checkTime, 6000);
+    document.getElementById("dateStamp").innerHTML += `It is currently ${isoTime} on the ${isoDate}.`
+    setTimeout(welcomeUser, 6000);
 }
 
 export { checkTime, calcDayPhase };
