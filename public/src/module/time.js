@@ -56,4 +56,13 @@ function isoMonth(currentMonth) {
     return `${listOfMonths[currentMonth]}`;
 }
 
-export { calcDayPhase, isoTimeStamp, isoDateStamp };
+function checkTime() {
+    let currentTime = new Date();
+    let isoTime = isoTimeStamp(currentTime.getHours(), currentTime.getMinutes());
+    let isoDate = isoDateStamp(currentTime.getDate(), currentTime.getMonth(), currentTime.getFullYear());
+
+    document.getElementById("dateStamp").innerHTML = `It is currently ${isoTime} on the ${isoDate}.`
+    setTimeout(checkTime, 6000);
+}
+
+export { checkTime, calcDayPhase };

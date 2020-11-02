@@ -1,0 +1,18 @@
+
+:root {
+    --padding: 3em;
+
+    --x-small-font: 11px;
+    --small-font: 14px;
+    --medium-font: 15px;
+    --large-font: 20px;
+    --x-large-font: 24px;
+    --xx-large-font: 32px;
+    --xxx-large-font: 42px;
+    --bold: 800;
+
+    --light-theme: #F5E1FD;
+    --theme: #B399D4;
+    --dark-theme: #443557;
+    --hover-theme: #a08cb9;
+}

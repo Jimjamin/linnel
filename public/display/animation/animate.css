@@ -1,0 +1,66 @@
+
+#preLoader {
+    animation-name: fadeout;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: fadeout;
+    -moz-animation-name: fadeout;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+@keyframes fadeout { 100% { opacity: 0; } }
+@-moz-keyframes fadeout { 100% { opacity: 0; } }
+@-webkit-keyframes fadeout { 100% { opacity: 0; } }
+@-o-keyframes fadeout { 100% { opacity: 0; } }
+
+#loaderBar {
+    animation-name: progressBar;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: progressBar;
+    -moz-animation-name: progressBar;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3;
+    animation-duration: 1.2s;
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+}
+
+@keyframes progressBar { 100% { width: 120px !important; min-width: 120px; } }
+@-moz-keyframes progressBar { 100% { width: 120px !important; min-width: 120px; } }
+@-webkit-keyframes progressBar { 100% { width: 120px !important; min-width: 120px; } }
+@-o-keyframes progressBar { 100% { width: 120px !important; min-width: 120px; } }
+
+body {
+    animation-name: slideup;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: slideup;
+    -moz-animation-name: slideup;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+@keyframes slideup {
+    0% { margin-top: 80px; height: calc(100% - 2.25*var(--padding) - 80px) }
+    100% { margin-top: 0px; height: calc(100% - 2.25*var(--padding)) }
+}
+@-moz-keyframes slideup {
+    0% { margin-top: 80px; height: calc(100% - 2.25*var(--padding) - 80px) }
+    100% { margin-top: 0px; height: calc(100% - 2.25*var(--padding)) }
+}
+@-webkit-keyframes slideup {
+    0% { margin-top: 80px; height: calc(100% - 2.25*var(--padding) - 80px) }
+    100% { margin-top: 0px; height: calc(100% - 2.25*var(--padding)) }
+}
+@-o-keyframes slideup {
+    0% { margin-top: 80px; height: calc(100% - 2.25*var(--padding) - 80px) }
+    100% { margin-top: 0px; height: calc(100% - 2.25*var(--padding)) }
+}
