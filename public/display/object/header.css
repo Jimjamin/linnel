@@ -77,10 +77,6 @@ header label {
     margin-left: 6px;
 }
 
-#lightMode {
-    display: none;
-}
-
 header label:hover {
     cursor: pointer;
 }

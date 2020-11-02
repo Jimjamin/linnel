@@ -15,8 +15,12 @@
     #linnel {
         display: none;
     }
-    #headerLogo {
-        display: block;
+    #search {
+        left: calc(50% - 108px - var(--padding)) !important;
+    }
+    #themeBtn {
+        float: left !important;
+        left: calc(35px + (var(--padding) - 1em)) !important;
     }
 }
 
@@ -30,22 +34,16 @@
     html, body {
         padding-left: calc(var(--padding) - 1.5em);
         padding-right: calc(var(--padding) - 1.5em);
-        width: calc(100% - 1.5*var(--padding));
-    }
-    p, span {
-        text-align: justify;
+        width: calc(100% - 1.25*var(--padding));
     }
     #headerLogo {
         display: none;
     }
-    #profileBtn {
-        right: 10px !important;
-    }
-    #lightMode, #nightMode {
+    #themeBtn {
         float: left !important;
         left: calc(25px + (var(--padding) - 1em)) !important;
     }
     #search {
-        left: calc(50% - 84px - var(--padding)) !important;
+        left: calc(50% - 82.5px - var(--padding)) !important;
     }
 }

@@ -7,8 +7,7 @@ import { checkWeather } from './module/weather.js';
 const user = "";
 
 window.onload = () => {
-    document.getElementById("lightMode").onclick = switchLightMode;
-    document.getElementById("nightMode").onclick = switchLightMode;
+    document.getElementById("themeBtn").onclick = switchLightMode;
 
     welcomeUser();
 
@@ -20,9 +19,9 @@ window.onload = () => {
 
 function reloadHome() {
     let homeLogos = document.getElementsByClassName("homeLogo");
-    for (let index in homeLogos.length) {
-        homeLogos[index].addEventListener("click", () => {
-            window.location.href = "http://localhost:3000";
+    for (let index of homeLogos) {
+        index.addEventListener("click", () => {
+            window.location.href = `${window.location.protocol}//${window.location.host}/home`;
         });
     }
 }
@@ -46,17 +45,17 @@ function welcomeUser() {
 }
 
 function switchLightMode() {
-    if (document.getElementById("nightMode").style.display === "none") {
+    if (document.getElementById("lightIcon")) {
         document.getElementById("menuBar").style.backgroundColor = "var(--theme)";
         document.body.style.backgroundColor = "var(--light-theme)";
         document.body.style.color = "black";
-        document.getElementById("lightMode").style.display = "none";
-        document.getElementById("nightMode").style.display = "inline-block";
+        document.getElementById("lightIcon").src = "../image/icons/night.png";
+        document.getElementById("lightIcon").id = "nightIcon";
     } else {
         document.getElementById("menuBar").style.backgroundColor = "var(--dark-theme)";
         document.body.style.backgroundColor = "var(--theme)";
         document.body.style.color = "white";
-        document.getElementById("nightMode").style.display = "none";
-        document.getElementById("lightMode").style.display = "inline-block";
+        document.getElementById("nightIcon").src = "../image/icons/light.png";
+        document.getElementById("nightIcon").id = "lightIcon";
     }
 }
