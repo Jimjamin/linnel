@@ -22,7 +22,7 @@ function generalForecast(userForecast, forecastComponents) {
     generalForecastList[1].innerHTML = `${userForecast.forecast.forecastday[0].day.mintemp_c}&#8451;`;
     generalForecastList[2].innerHTML = `${userForecast.forecast.forecastday[0].day.maxtemp_c}&#8451;`;
     generalForecastList[3].innerHTML = `${userForecast.current.humidity}%`;
-    generalForecastList[4].innerHTML = `${userForecast.current.wind_kph}kph`;
+    generalForecastList[4].innerHTML = `${userForecast.current.wind_kph}KPH`;
     generalForecastList[5].innerHTML = `${userForecast.current.wind_dir}`;
 }
 
@@ -38,11 +38,11 @@ function temperatureForecast(userForecast, forecastComponents) {
 
 function windRainForecast(userForecast, forecastComponents) {
     let generalForecastList = forecastComponents[2].querySelectorAll("span");
-    generalForecastList[0].innerHTML = `${userForecast.current.wind_kph}kph`;
+    generalForecastList[0].innerHTML = `${userForecast.current.wind_kph}KPH`;
     generalForecastList[1].innerHTML = `${userForecast.current.wind_dir}`;
-    generalForecastList[2].innerHTML = `${userForecast.current.gust_kph}kph`;
-    generalForecastList[3].innerHTML = `${userForecast.forecast.forecastday[0].day.maxwind_kph}kph`;
-    generalForecastList[4].innerHTML = `${userForecast.forecast.forecastday[0].day.totalprecip_mm}mm`;
+    generalForecastList[2].innerHTML = `${userForecast.current.gust_kph}KPH`;
+    generalForecastList[3].innerHTML = `${userForecast.forecast.forecastday[0].day.maxwind_kph}KPH`;
+    generalForecastList[4].innerHTML = `${userForecast.forecast.forecastday[0].day.totalprecip_mm}MM`;
     generalForecastList[5].innerHTML = `${userForecast.forecast.forecastday[0].day.daily_will_it_rain}%`;
     generalForecastList[6].innerHTML = `${userForecast.forecast.forecastday[0].day.daily_will_it_snow}%`;
 }
