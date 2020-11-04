@@ -25,6 +25,6 @@ body {
 }
 
 @keyframes slideup {
-    0% { margin-top: 80px; height: calc(100% - 2.25*var(--padding) - 80px) }
-    100% { margin-top: 0px; height: calc(100% - 2.25*var(--padding)) }
+    0% { margin-top: 80px; min-height: calc(100% - 80px); }
+    100% { margin-top: 0px; min-height: 100%; }
 }

@@ -11,37 +11,73 @@
         <link rel="stylesheet" type="text/css" href="../display/animation/media.css">
         <link rel="icon" href="../image/favicon.png">
         <script src="../src/script.js" type="module" defer></script>
+        <script src="../src/weather.js" type="module" defer></script>
     </head>
     <body>
-        <div id="preLoader">
-            <img src="../image/linnelShort.png" id="preLoaderLogo">
-            <div id="loaderContainer">
-                <span id="loaderBar"></span>
+        <div id="app">
+            <div id="preLoader">
+                <img src="../image/linnelShort.png" id="preLoaderLogo">
+                <div id="loaderContainer">
+                    <span id="loaderBar"></span>
+                </div>
+            </div>
+            <header id="menuBar">
+                <img id="linnel" src="../image/linnel.png" height="48px" class="homeLogo">
+                <img id="headerLogo" src="../image/logo.png" height="48px" class="homeLogo">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <label for="search"><img src="../image/icons/search.png" height="28px" width="28px"></label>
+                <button id="profileBtn"><img src="../image/icons/profile.png" height="48px" width="48px"></button>
+                <button id="helpBtn"><img src="../image/icons/help.png" height="48px" width="48px"></button>
+                <button id="themeBtn"><img id="lightIcon" src="../image/icons/light.png" height="48px" width="48px"></button>
+            </header>
+            <div class="component">
+                <img id="weatherStatus" src="">
+                <h2 class="weatherDesc"></h2>
+                <div class="forecastComponent">
+                    <p><b>Current Temp:</b> <span></span></p>
+                    <p><b>Min Temp:</b> <span></span></p>
+                    <p><b>Max Temp:</b> <span></span></p>
+                    <p><b>Humidity:</b> <span></span></p>
+                    <p><b>Wind Speed:</b> <span></span></p>
+                    <p><b>Wind Direction:</b> <span></span></p>
+                </div>
+            </div>
+            <br></br>
+            <div class="component">
+                <h3 class="weatherDesc">Temperature</h3>
+                <div class="forecastComponent">
+                    <p><b>Min Temp:</b> <span></span></p>
+                    <p><b>Max Temp:</b> <span></span></p>
+                    <p><b>Avg Temp:</b> <span></span></p>
+                    <p><b>UV:</b> <span></span></p>
+                    <p><b>Humidity:</b> <span></span></p>
+                    <p><b>Avg Humidity:</b> <span></span></p>
+                </div>
+            </div>
+            <br></br>
+            <div class="component">
+                <h3 class="weatherDesc">Wind & Rain</h3>
+                <div class="forecastComponent">
+                    <p><b>Wind Speed:</b> <span></span></p>
+                    <p><b>Wind Direction:</b> <span></span></p>
+                    <p><b>Gust Speed:</b> <span></span></p>
+                    <p><b>Max Wind Speed:</b> <span></span></p>
+                    <p><b>Total Precipitation:</b> <span></span></p>
+                    <p><b>Chance of Rain:</b> <span></span></p>
+                    <p><b>Chance of Snow:</b> <span></span></p>
+                </div>
+            </div>
+            <br></br>
+            <div class="component">
+                <h3 class="weatherDesc">Sun & Moon</h3>
+                <div class="forecastComponent">
+                    <p><b>Sunrise:</b> <span></span></p>
+                    <p><b>Sunset:</b> <span></span></p>
+                    <p><b>Moonrise:</b> <span></span></p>
+                    <p><b>Moonset:</b> <span></span></p>
+                    <p><b>Moon Phase:</b> <span></span></p>
+                </div>
             </div>
         </div>
-        <header id="menuBar">
-            <img id="linnel" src="../image/linnel.png" height="48px" class="homeLogo">
-            <img id="headerLogo" src="../image/logo.png" height="48px" class="homeLogo">
-            <input type="text" name="search" id="search" placeholder="Search...">
-            <label for="search"><img src="../image/icons/search.png" height="28px" width="28px"></label>
-            <button id="profileBtn"><img src="../image/icons/profile.png" height="48px" width="48px"></button>
-            <button id="helpBtn"><img src="../image/icons/help.png" height="48px" width="48px"></button>
-            <button id="themeBtn"><img id="lightIcon" src="../image/icons/light.png" height="48px" width="48px"></button>
-        </header>
-        <div class="component">
-            <img id="weatherStatus" src="//cdn.weatherapi.com/weather/64x64/day/122.png" alt="overcast" height="96px" width="96px">
-            <h3 id="weatherDesc">Overcast</h3>
-            <div id="briefForecast">
-                <p>Location: Brisbane</p>
-                <p>Min Temp: 17.5</p>
-                <p>Max Temp: 28.2</p>
-                <p>Humidity: 59%</p>
-                <p>Wind Speed: 18.4kph</p>
-                <p>Wind Direction: SE</p>
-            </div>
-        </div>
-        <footer id="presentedBy">
-            <p>presented by linnel.com</p>
-        </footer>
     </body>
 </html>

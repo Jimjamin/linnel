@@ -1,6 +1,6 @@
 
 @media screen and (max-width: 950px) {
-    #helpBtn, footer {
+    #helpBtn {
         display: none !important;
     }
 }
@@ -22,16 +22,13 @@
         float: left !important;
         left: calc(35px + (var(--padding) - 1em)) !important;
     }
-    html, body {
-        padding-left: calc(var(--padding) - 2em);
-        padding-right: calc(var(--padding) - 25em);
-        width: calc(100% - 0.75*var(--padding));
+    .forecastComponent {
+        text-align: center;
+        margin-left: 5%;
     }
-}
-
-@media screen and (max-height: 600px) {
-    footer {
-        display: none !important;
+    .forecastComponent span {
+        float: none;
+        margin-right: 5%;
     }
 }
 

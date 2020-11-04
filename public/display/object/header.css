@@ -52,7 +52,7 @@ header button {
 }
 
 header button:hover {
-    background-color: var(--hover-theme);
+    background-color: var(--hover-theme) !important;
 }
 
 header input, header label {

@@ -1,17 +1,19 @@
 
 "use strict";
 
-async function checkWeather() {
+import { printForecast } from './module/forecast.js';
+
+async function checkWeather(whenToCheck) {
     await fetch("https://extreme-ip-lookup.com/json")
         .then(response => response.json())
-        .then(response => fetchWithLocation(response.city))
+        .then(response => fetchWithLocation(response.city, whenToCheck))
         .catch(error => {
             console.log(`Request for user location has failed: ${error.message}`)
         })
 }
 
-function fetchWithLocation(userLocation) {
-    let weatherSearchUrl = `${window.location.protocol}//${window.location.host}/weather/current`;
+function fetchWithLocation(userLocation, whenToCheck) {
+    let weatherSearchUrl = `${window.location.protocol}//${window.location.host}/weather?time=${whenToCheck}`;
     let weatherSearchMethod = {
         method: "POST",
         headers: {
@@ -21,7 +23,10 @@ function fetchWithLocation(userLocation) {
     }
     fetch(weatherSearchUrl, weatherSearchMethod)
         .then(response => response.json())
-        .then(response => printWeather(response, userLocation))
+        .then(response => {
+            if (whenToCheck === "current") printWeather(response, userLocation);
+            else printForecast(response);
+        })
         .catch(error => {
             console.log(`Request for user location has failed: ${error.message}`)
         })
@@ -29,7 +34,7 @@ function fetchWithLocation(userLocation) {
 
 function printWeather(userWeather, userLocation) {
     let weatherConditions = ["", "", "", ""];
-    weatherConditions = weatherBot(userWeather, weatherConditions, userLocation);
+    weatherConditions = weatherBot(userWeather.current, weatherConditions, userLocation);
     document.getElementById("weatherStamp").innerHTML = "";
     for (let condition in weatherConditions) {
         document.getElementById("weatherStamp").innerHTML += weatherConditions[condition];

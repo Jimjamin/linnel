@@ -11,29 +11,29 @@
         <link rel="stylesheet" type="text/css" href="../display/animation/media.css">
         <link rel="icon" href="../image/favicon.png">
         <script src="../src/script.js" type="module" defer></script>
+        <script src="../src/weather.js" type="module" defer></script>
     </head>
     <body>
-        <div id="preLoader">
-            <img src="../image/linnelShort.png" id="preLoaderLogo">
-            <div id="loaderContainer">
-                <span id="loaderBar"></span>
+        <div id="app">
+            <div id="preLoader">
+                <img src="../image/linnelShort.png" id="preLoaderLogo">
+                <div id="loaderContainer">
+                    <span id="loaderBar"></span>
+                </div>
+            </div>
+            <header id="menuBar">
+                <img id="linnel" src="../image/linnel.png" height="48px" class="homeLogo">
+                <img id="headerLogo" src="../image/logo.png" height="48px" class="homeLogo">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <label for="search"><img src="../image/icons/search.png" height="28px" width="28px"></label>
+                <button id="profileBtn"><img src="../image/icons/profile.png" height="48px" width="48px"></button>
+                <button id="helpBtn"><img src="../image/icons/help.png" height="48px" width="48px"></button>
+                <button id="themeBtn"><img id="lightIcon" src="../image/icons/light.png" height="48px" width="48px"></button>
+            </header>
+            <div class="component">
+                <p id="dateStamp"></p>
+                <p id="weatherStamp"></p>
             </div>
         </div>
-        <header id="menuBar">
-            <img id="linnel" src="../image/linnel.png" height="48px" class="homeLogo">
-            <img id="headerLogo" src="../image/logo.png" height="48px" class="homeLogo">
-            <input type="text" name="search" id="search" placeholder="Search...">
-            <label for="search"><img src="../image/icons/search.png" height="28px" width="28px"></label>
-            <button id="profileBtn"><img src="../image/icons/profile.png" height="48px" width="48px"></button>
-            <button id="helpBtn"><img src="../image/icons/help.png" height="48px" width="48px"></button>
-            <button id="themeBtn"><img id="lightIcon" src="../image/icons/light.png" height="48px" width="48px"></button>
-        </header>
-        <div class="component">
-            <p id="dateStamp"></p>
-            <p id="weatherStamp"></p>
-        </div>
-        <footer id="presentedBy">
-            <p>presented by linnel.com</p>
-        </footer>
     </body>
 </html>
